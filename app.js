@@ -22,3 +22,9 @@ const phrases = [
     "Joker",
     "Parasite"
 ]
+
+// get Random Phrase As Array Function
+
+function getRandomPhraseAsArray(arr) {
+    const randomPhrase = Math.floor(Math.random()  * arr.length);
+}
