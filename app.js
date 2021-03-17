@@ -12,3 +12,13 @@ let missed = 0;
 startButton.addEventListener("click", () => {
  overlay.style.display = "none";
 });
+
+// phrases
+
+const phrases = [
+    "A walk to remember",
+    "10 things I hate about you",
+    "A girl on the train",
+    "Joker",
+    "Parasite"
+]
