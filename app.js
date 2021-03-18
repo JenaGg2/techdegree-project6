@@ -71,35 +71,35 @@ function addPhraseToDisplay(arr) {
 // Check if letter is in phrasse
 
 
-// const checkLetter = (button) => {
-//     const letterList = document.querySelectorAll('.letters');
-//     let matched = null;
+const checkLetter = (button) => {
+    const letterList = document.querySelectorAll('.letters');
+    let matched = null;
     
-//     for (i=0; i < letters.length; i++) {
-//       if (button === letters[i].textContent.toLowerCase()) {
-//         letters[i].classList.add('show');
-//         matched = true;
-//       }
+    for (i=0; i < letters.length; i++) {
+      if (button === letters[i].textContent.toLowerCase()) {
+        letters[i].classList.add('show');
+        matched = true;
+      }
       
-//     }
+    }
   
-//     return matched;
-//   };
+    return matched;
+  };
 
 
-// //   Listen for onscreen keyboard to be clicked
+//   Listen for onscreen keyboard to be clicked
   
-//   qwerty.addEventListener('click', event => {
-//     if (event.target.tagName === "BUTTON") {
-//       event.target.className = 'chosen';
-//       event.target.disabled = true;
-//       const match = checkLetter(event.target.textContent.toLowerCase());
-//       if (match === null) {
-//         missed++;
+  qwerty.addEventListener('click', event => {
+    if (event.target.tagName === "BUTTON") {
+      event.target.className = 'chosen';
+      event.target.disabled = true;
+      const match = checkLetter(event.target.textContent.toLowerCase());
+      if (match === null) {
+        missed++;
         
-//         liveHeart[missed].src="images/lostHeart.png"
-//       }
+        liveHeart[missed].src="images/lostHeart.png"
+      }
      
-//     }
-//   });
+    }
+  });
 
