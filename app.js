@@ -3,7 +3,7 @@ const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
 
 const liveHeart = document.querySelector('.tries img');
-const button = document.getElementsByTagName('button');
+// const button = document.getElementsByTagName('button');
 const startButton = document.querySelector('.btn__reset');
 const overlay = document.getElementById('overlay');
 
