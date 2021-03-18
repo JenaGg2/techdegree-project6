@@ -25,14 +25,34 @@ const phrases = [
     "Parasite"
 ]
 
-// get Random PhraseAs Array Function
+// get Random Phrase As Array Function
 
 function getRandomPhraseAsArray(arr) {
-    const randomPhrase = Math.floor(Math.random()  * arr.length);
-    return randomPhrase.split('');
+    const randomNumber = Math.floor(Math.random()  * arr.length);
+    const randomPhrase = arr[randomNumber];
+
+    const characters = randomPhrase.split('');
+    return characters;
 }
 
-getRandomPhraseAsArray(phrases)
+
+function addPhraseToDisplay(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        const li = document.createElement("li");
+        li.textContent = arr[i];
+        phrase.appendChild(li);
+    }
+}
+
+
+
+// // Add phrase to display
+
+
+
+
+
+
 
 
 
@@ -51,35 +71,35 @@ getRandomPhraseAsArray(phrases)
 // Check if letter is in phrasse
 
 
-const checkLetter = (button) => {
-    const letterList = document.querySelectorAll('.letters');
-    let matched = null;
+// const checkLetter = (button) => {
+//     const letterList = document.querySelectorAll('.letters');
+//     let matched = null;
     
-    for (i=0; i < letters.length; i++) {
-      if (button === letters[i].textContent.toLowerCase()) {
-        letters[i].classList.add('show');
-        matched = true;
-      }
+//     for (i=0; i < letters.length; i++) {
+//       if (button === letters[i].textContent.toLowerCase()) {
+//         letters[i].classList.add('show');
+//         matched = true;
+//       }
       
-    }
+//     }
   
-    return matched;
-  };
+//     return matched;
+//   };
 
 
-//   Listen for onscreen keyboard to be clicked
+// //   Listen for onscreen keyboard to be clicked
   
-  qwerty.addEventListener('click', event => {
-    if (event.target.tagName === "BUTTON") {
-      event.target.className = 'chosen';
-      event.target.disabled = true;
-      const match = checkLetter(event.target.textContent.toLowerCase());
-      if (match === null) {
-        missed++;
+//   qwerty.addEventListener('click', event => {
+//     if (event.target.tagName === "BUTTON") {
+//       event.target.className = 'chosen';
+//       event.target.disabled = true;
+//       const match = checkLetter(event.target.textContent.toLowerCase());
+//       if (match === null) {
+//         missed++;
         
-        liveHeart[missed].src="images/lostHeart.png"
-      }
+//         liveHeart[missed].src="images/lostHeart.png"
+//       }
      
-    }
-  });
+//     }
+//   });
 
