@@ -2,12 +2,10 @@
 const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
 
-const liveHeart = document.querySelector('.tries img');
-// const button = document.getElementsByTagName('button');
+const liveHeart = document.querySelectorAll('.tries img');
+const button = document.getElementsByTagName('button');
 const startButton = document.querySelector('.btn__reset');
 const overlay = document.getElementById('overlay');
-
-
 let missed = 0;
 
 //Button EventListener/funcion .....
@@ -15,7 +13,7 @@ startButton.addEventListener("click", () => {
  overlay.style.display = "none";
 });
 
-// phrases
+// movie list in phrases
 
 const phrases = [
     "A walk to remember",
@@ -23,46 +21,34 @@ const phrases = [
     "A girl on the train",
     "Joker",
     "Parasite"
-]
+];
 
 // get Random Phrase As Array Function
 
 function getRandomPhraseAsArray(arr) {
-    const randomNumber = Math.floor(Math.random()  * arr.length);
-    const randomPhrase = arr[randomNumber];
+    return phrases[Math.floor(Math.random()  * arr.length)].split('');
+    
 
-    const characters = randomPhrase.split('');
-    return characters;
 }
+   randomPhrase = getRandomPhraseAsArray(phrases);   
 
+
+  //  Display Phrase
 
 function addPhraseToDisplay(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        const li = document.createElement("li");
-        li.textContent = arr[i];
-        phrase.appendChild(li);
+  for (let i = 0; i < arr.length; i += 1) {
+    let li = document.createElement('li');
+    li.textContent = arr[i].toLowerCase();
+    phrase.appendChild(li);
+    if (li.textContent === ' ') {
+      li.className = 'space';
+    } else {
+      li.className = 'letter';
     }
+  }
 }
 
-
-
-// // Add phrase to display
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+addPhraseToDisplay(randomPhrase);
 
 
 
@@ -71,19 +57,18 @@ function addPhraseToDisplay(arr) {
 // Check if letter is in phrasse
 
 
-const checkLetter = (button) => {
-    const letterList = document.querySelectorAll('.letters');
-    let matched = null;
-    
-    for (i=0; i < letters.length; i++) {
-      if (button === letters[i].textContent.toLowerCase()) {
-        letters[i].classList.add('show');
+function checkLetter(button) {
+  const letterList = document.queryAllSelector('.li');
+  const match = null;
+    for (let i=0; i < letterList.length; i++) {
+      if (button === letterList[i].textContent.toLowerCase()) {
+        letterList[i].classList.add('show');
         matched = true;
       }
       
-    }
+    };
   
-    return matched;
+    return match;
   };
 
 
