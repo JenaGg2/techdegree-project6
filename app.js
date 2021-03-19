@@ -58,11 +58,11 @@ addPhraseToDisplay(randomPhrase);
 
 
 function checkLetter(button) {
-  const letterList = document.queryAllSelector('.li');
+  const letter = document.queryAllSelector('li');
   const match = null;
-    for (let i=0; i < letterList.length; i++) {
-      if (button === letterList[i].textContent.toLowerCase()) {
-        letterList[i].classList.add('show');
+    for (let i=0; i < letter.length; i++) {
+      if (button === letter[i].textContent.toLowerCase()) {
+        letter[i].classList.add('show');
         matched = true;
       }
       
