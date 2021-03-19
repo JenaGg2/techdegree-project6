@@ -87,6 +87,7 @@ function checkLetter(button) {
         const hearts = document.querySelectorAll('img');
         hearts[lostHeart].setAttribute("src","images/lostHeart.png");
       }
+      checkWin();
     } 
     
   });
@@ -94,24 +95,25 @@ function checkLetter(button) {
 
 
   // function checkWin() {
-  //    const letterList = document.querySelectorAll('.letter');
-  //    const showList = document.querySelectorAll('.show');
-  //    const headText = document.querySelector('.title');
+     const letterList = document.querySelectorAll('.letter');
+     const showList = document.querySelectorAll('.show');
+     const headText = document.querySelector('.title');
 
-  //   //  const letterListCount = letterList.length;
-  //   //  const showListCount = showList.length;
+    //  const letterListCount = letterList.length;
+    //  const showListCount = showList.length;
 
-  //  if (letterList.length === showList.length) {
-  //     overlay.className = 'win';
-  //     headText.textContent = "Congralutations, you won!!"
-  //     overlay.style.display = 'flex';
+   if (letterList.length === showList.length) {
+      overlay.className = 'win';
+      headText.textContent = "Congralutations, you won!!"
+      overlay.style.display = 'flex';
 
       
-  //  } else if (missed >= 5 ) {
-  //    overlay.className = 'lose'
-  //    headText.textContent = "You, Lose!! Try next time";
-  //    overlay.style.display = "flex";
-  //  }
+   } else if (missed >= 5 ) {
+     overlay.className = 'lose'
+     headText.textContent = "You, Lose!! Try next time";
+     overlay.style.display = "flex";
+   
+    }
 
 
-  // }
+  
