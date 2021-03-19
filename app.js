@@ -91,3 +91,20 @@ function checkLetter(button) {
     }
   });
 
+
+
+  function checkWin() {
+     const letterList = document.querySelectorAll('.letter');
+     const showList = document.querySelectorAll('.show');
+
+     const letterListCount = letterList.length;
+     const showListCount = showList.length;
+
+   if (letterListCount === showListCount) {
+      overlay.className = 'win';
+
+      
+   }
+
+
+  }
