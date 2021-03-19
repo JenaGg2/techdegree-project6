@@ -60,11 +60,11 @@ addPhraseToDisplay(randomPhrase);
 
 function checkLetter(button) {
   const letter = document.querySelectorAll('li');
-  const match = null;
+  let match = null;
     for (let i=0; i < letter.length; i++) {
       if (button === letter[i].textContent.toLowerCase()) {
         letter[i].classList.add('show');
-        matched = true;
+        match = true;
       }
       
     };
