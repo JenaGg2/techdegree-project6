@@ -44,6 +44,7 @@ function addPhraseToDisplay(arr) {
       li.className = 'space';
     } else {
       li.className = 'letter';
+
     }
   }
 }
@@ -58,7 +59,8 @@ addPhraseToDisplay(randomPhrase);
 
 
 function checkLetter(button) {
-  const letter = document.queryAllSelector('li');
+  const letter = document.querySelectorAll('li');
+  console.log(letter);
   const match = null;
     for (let i=0; i < letter.length; i++) {
       if (button === letter[i].textContent.toLowerCase()) {
@@ -79,10 +81,11 @@ function checkLetter(button) {
       event.target.className = 'chosen';
       event.target.disabled = true;
       const match = checkLetter(event.target.textContent.toLowerCase());
+      console.log(match);
       if (match === null) {
         missed++;
         
-        liveHeart[missed].src="images/lostHeart.png"
+        liveHeart[missed-1].setAttribute("src","images/lostHeart.png");
       }
      
     }
