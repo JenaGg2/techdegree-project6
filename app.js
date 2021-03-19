@@ -60,7 +60,6 @@ addPhraseToDisplay(randomPhrase);
 
 function checkLetter(button) {
   const letter = document.querySelectorAll('li');
-  console.log(letter);
   const match = null;
     for (let i=0; i < letter.length; i++) {
       if (button === letter[i].textContent.toLowerCase()) {
@@ -81,30 +80,38 @@ function checkLetter(button) {
       event.target.className = 'chosen';
       event.target.disabled = true;
       const match = checkLetter(event.target.textContent.toLowerCase());
-      console.log(match);
+      
       if (match === null) {
         missed++;
-        
-        liveHeart[missed-1].setAttribute("src","images/lostHeart.png");
+        const lostHeart = 5 - missed;
+        const hearts = document.querySelectorAll('img');
+        hearts[lostHeart].setAttribute("src","images/lostHeart.png");
       }
-     
-    }
+    } 
+    
   });
 
 
 
-  function checkWin() {
-     const letterList = document.querySelectorAll('.letter');
-     const showList = document.querySelectorAll('.show');
+  // function checkWin() {
+  //    const letterList = document.querySelectorAll('.letter');
+  //    const showList = document.querySelectorAll('.show');
+  //    const headText = document.querySelector('.title');
 
-     const letterListCount = letterList.length;
-     const showListCount = showList.length;
+  //   //  const letterListCount = letterList.length;
+  //   //  const showListCount = showList.length;
 
-   if (letterListCount === showListCount) {
-      overlay.className = 'win';
+  //  if (letterList.length === showList.length) {
+  //     overlay.className = 'win';
+  //     headText.textContent = "Congralutations, you won!!"
+  //     overlay.style.display = 'flex';
 
       
-   }
+  //  } else if (missed >= 5 ) {
+  //    overlay.className = 'lose'
+  //    headText.textContent = "You, Lose!! Try next time";
+  //    overlay.style.display = "flex";
+  //  }
 
 
-  }
+  // }
