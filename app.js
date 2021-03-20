@@ -33,7 +33,7 @@ function getRandomPhraseAsArray(arr) {
    randomPhrase = getRandomPhraseAsArray(phrases);   
 
 
-  //  Display Phrase
+  //  Display Phrase function;
 
 function addPhraseToDisplay(arr) {
   for (let i = 0; i < arr.length; i += 1) {
