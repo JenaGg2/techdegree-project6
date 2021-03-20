@@ -64,6 +64,7 @@ function checkLetter(button) {
     for (let i=0; i < letter.length; i++) {
       if (button === letter[i].textContent.toLowerCase()) {
         letter[i].classList.add('show');
+        letter[i].style.transition = '3s ease-out';
         match = true;
       }
       
@@ -98,20 +99,34 @@ function checkLetter(button) {
      const letterList = document.querySelectorAll('.letter');
      const showList = document.querySelectorAll('.show');
      const headText = document.querySelector('.title');
+     
 
 
    if (letterList.length === showList.length) {
       overlay.className = 'win';
       headText.textContent = "Congralutations, you won!!"
       overlay.style.display = 'flex';
+      //  
 
       
    } else if (missed >= 5 ) {
      overlay.className = 'lose'
      headText.textContent = "Sorry, you loose. Please try again.";
      overlay.style.display = "flex";
+    
    
     }
 
+    resetGame();
+
+  };
+
+
+  function resetGame() { 
+
+    startButton.textContent="Play again";
+    startButton.addEventListener('click', () => {
+      location.reload(); 
+    });
   };
   
