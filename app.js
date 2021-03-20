@@ -92,15 +92,13 @@ function checkLetter(button) {
     
   });
 
+//  Check win 
 
-
-  // function checkWin() {
+  function checkWin() {
      const letterList = document.querySelectorAll('.letter');
      const showList = document.querySelectorAll('.show');
      const headText = document.querySelector('.title');
 
-    //  const letterListCount = letterList.length;
-    //  const showListCount = showList.length;
 
    if (letterList.length === showList.length) {
       overlay.className = 'win';
@@ -110,10 +108,10 @@ function checkLetter(button) {
       
    } else if (missed >= 5 ) {
      overlay.className = 'lose'
-     headText.textContent = "You, Lose!! Try next time";
+     headText.textContent = "Sorry, you loose. Please try again.";
      overlay.style.display = "flex";
    
     }
 
-
+  };
   
