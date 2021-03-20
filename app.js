@@ -8,7 +8,7 @@ const startButton = document.querySelector('.btn__reset');
 const overlay = document.getElementById('overlay');
 let missed = 0;
 
-//Button EventListener/funcion .....
+//Button EventListener/function .....
 startButton.addEventListener("click", () => {
  overlay.style.display = "none";
 });
@@ -93,7 +93,7 @@ function checkLetter(button) {
     
   });
 
-//  Check win 
+//  Check win function;
 
   function checkWin() {
      const letterList = document.querySelectorAll('.letter');
@@ -121,6 +121,7 @@ function checkLetter(button) {
 
   };
 
+// reset game function;
 
   function resetGame() { 
 
