@@ -17,7 +17,7 @@ startButton.addEventListener("click", () => {
 
 const phrases = [
     "A walk to remember",
-    "10 things I hate about you",
+    "Pretty Woman",
     "A girl on the train",
     "Joker",
     "Parasite"
